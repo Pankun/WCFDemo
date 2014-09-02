@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SongDAO</name>
+    </assembly>
+    <members>
+        <member name="T:SongDAO.SongApp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SongDAO.SongApp.AddSong(System.String,System.String,System.String,System.String)">
+             <summary>
+             Add a song into XML data source
+             </summary>
+             <param name="TheArtist">Artist Name</param>
+             <param name="TheAlbum">Album Title</param>
+             <param name="TheTitle">Song Title</param>
+             <param name="TheLength">Song Length</param>
+             <returns>
+             FunctionReturnObject. 
+             (System message will be stored in ReturnMessage property.)
+             </returns>
+             <remarks>
+             When artist/album are new, the artist/album will also be created in XML data source.
+             </remarks>
+            
+        </member>
+        <member name="M:SongDAO.SongApp.UpdateSong(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Update Song in XML data source
+            </summary>
+            <param name="TheArtist">Artist Name</param>
+            <param name="TheAlbum">Album Title</param>
+            <param name="TheSongId">Song ID</param>
+            <param name="TheTitle">Song Title</param>
+            <param name="TheLength">Song Length</param>
+            <returns>
+            FunctionReturnObject
+            </returns>
+        </member>
+        <member name="T:SongDAO.AlbumApp">
+            <summary>
+            Album Data Access Object
+            </summary>
+        </member>
+        <member name="T:music">
+            <remarks/>
+        </member>
+        <member name="P:music.Items">
+            <remarks/>
+        </member>
+        <member name="T:musicArtist">
+            <remarks/>
+        </member>
+        <member name="P:musicArtist.album">
+            <remarks/>
+        </member>
+        <member name="P:musicArtist.name">
+            <remarks/>
+        </member>
+        <member name="T:musicArtistAlbum">
+            <remarks/>
+        </member>
+        <member name="P:musicArtistAlbum.song">
+            <remarks/>
+        </member>
+        <member name="P:musicArtistAlbum.title">
+            <remarks/>
+        </member>
+        <member name="P:musicArtistAlbum.Id">
+            <remarks/>
+        </member>
+        <member name="T:musicArtistAlbumSong">
+            <remarks/>
+        </member>
+        <member name="P:musicArtistAlbumSong.title">
+            <remarks/>
+        </member>
+        <member name="P:musicArtistAlbumSong.length">
+            <remarks/>
+        </member>
+        <member name="P:musicArtistAlbumSong.SongId">
+            <remarks/>
+        </member>
+        <member name="T:album">
+            <remarks/>
+        </member>
+        <member name="P:album.song">
+            <remarks/>
+        </member>
+        <member name="P:album.title">
+            <remarks/>
+        </member>
+        <member name="P:album.Id">
+            <remarks/>
+        </member>
+        <member name="T:albumSong">
+            <remarks/>
+        </member>
+        <member name="P:albumSong.title">
+            <remarks/>
+        </member>
+        <member name="P:albumSong.length">
+            <remarks/>
+        </member>
+        <member name="P:albumSong.SongId">
+            <remarks/>
+        </member>
+        <member name="T:NewDataSet">
+            <remarks/>
+        </member>
+        <member name="P:NewDataSet.Items">
+            <remarks/>
+        </member>
+    </members>
+</doc>

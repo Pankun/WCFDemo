@@ -1,0 +1,8 @@
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongWCF\LocalAppLog\bin\Debug\LocalAppLog.dll
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongWCF\LocalAppLog\bin\Debug\LocalAppLog.pdb
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongWCF\LocalAppLog\obj\Debug\LocalAppLog.dll
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongWCF\LocalAppLog\obj\Debug\LocalAppLog.pdb
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\LocalAppLog\bin\Debug\LocalAppLog.dll
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\LocalAppLog\bin\Debug\LocalAppLog.pdb
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\LocalAppLog\obj\Debug\LocalAppLog.dll
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\LocalAppLog\obj\Debug\LocalAppLog.pdb

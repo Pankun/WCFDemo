@@ -1,0 +1,8 @@
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongDAO\bin\Debug\SongDAO.dll
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongDAO\bin\Debug\SongDAO.pdb
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongDAO\obj\Debug\SongDAO.dll
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongDAO\obj\Debug\SongDAO.pdb
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongDAO\bin\Debug\LocalAppLog.dll
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongDAO\bin\Debug\LocalAppLog.pdb
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongDAO\obj\Debug\SongDAO.csprojResolveAssemblyReference.cache
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongDAO\bin\Debug\SongDAO.XML

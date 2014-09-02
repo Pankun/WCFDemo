@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SongWCF", "SongWCF.csproj", "{17A5E079-5C2C-472C-9596-AB90ADE229F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SongDAO", "..\SongDAO\SongDAO.csproj", "{FD01A4A7-64D3-4954-A883-4664455188FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalAppLog", "..\LocalAppLog\LocalAppLog.csproj", "{4C767417-B3D7-439B-B9B7-4C6F387BDC3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17A5E079-5C2C-472C-9596-AB90ADE229F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17A5E079-5C2C-472C-9596-AB90ADE229F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17A5E079-5C2C-472C-9596-AB90ADE229F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17A5E079-5C2C-472C-9596-AB90ADE229F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD01A4A7-64D3-4954-A883-4664455188FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD01A4A7-64D3-4954-A883-4664455188FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD01A4A7-64D3-4954-A883-4664455188FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD01A4A7-64D3-4954-A883-4664455188FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C767417-B3D7-439B-B9B7-4C6F387BDC3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C767417-B3D7-439B-B9B7-4C6F387BDC3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C767417-B3D7-439B-B9B7-4C6F387BDC3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C767417-B3D7-439B-B9B7-4C6F387BDC3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,223 @@
+@import url("bootstrap.min.css");
+/* ====  main  ==== */
+.input-group[class*="col-"] {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+body {
+	background:none repeat scroll 0 0 #F3F3F3;
+}
+a {cursor:pointer}
+/* ==== vv nav bar ==== */
+
+.vv-nav  {
+  background-color: #428bca;
+  border-color: #436BCA;
+}
+
+.vv-nav  .navbar-brand {
+  color: #ffffff;
+}
+
+.vv-nav  .navbar-brand:hover,
+.vv-nav  .navbar-brand:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.vv-nav  .navbar-text {
+  color: #ffffff;
+}
+
+.vv-nav  .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.vv-nav  .navbar-nav > li > a:hover,
+.vv-nav  .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: #3D79AE;
+}
+
+.vv-nav  .navbar-nav > .active > a,
+.vv-nav  .navbar-nav > .active > a:hover,
+.vv-nav  .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #3D79AE;
+}
+
+.vv-nav  .navbar-nav > .disabled > a,
+.vv-nav  .navbar-nav > .disabled > a:hover,
+.vv-nav  .navbar-nav > .disabled > a:focus {
+  color: #444444;
+  background-color: transparent;
+}
+
+.vv-nav  .navbar-toggle {
+  border-color: #333333;
+}
+
+.vv-nav  .navbar-toggle:hover,
+.vv-nav  .navbar-toggle:focus {
+  background-color: #333333;
+}
+
+.vv-nav  .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+
+.vv-nav  .navbar-collapse,
+.vv-nav  .navbar-form {
+  border-color: #101010;
+}
+
+.vv-nav  .navbar-nav > .open > a,
+.vv-nav  .navbar-nav > .open > a:hover,
+.vv-nav  .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #3D79AE;
+}
+
+.vv-nav  .navbar-nav > .dropdown > a:hover .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.vv-nav  .navbar-nav > .dropdown > a .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.vv-nav  .navbar-nav > .open > a .caret,
+.vv-nav  .navbar-nav > .open > a:hover .caret,
+.vv-nav  .navbar-nav > .open > a:focus .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .vv-nav  .navbar-nav .open .dropdown-menu > .dropdown-header {
+    border-color: #3D79AE;
+  }
+  .vv-nav  .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .vv-nav  .navbar-nav .open .dropdown-menu > li > a:hover,
+  .vv-nav  .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+  }
+  .vv-nav  .navbar-nav .open .dropdown-menu > .active > a,
+  .vv-nav  .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .vv-nav  .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #3D79AE;
+  }
+  .vv-nav  .navbar-nav .open .dropdown-menu > .disabled > a,
+  .vv-nav  .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .vv-nav  .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #444444;
+    background-color: transparent;
+  }
+}
+
+.vv-nav  .navbar-link {
+  color: #ffffff;
+}
+
+.vv-nav  .navbar-link:hover {
+  color: #ffffff;
+}
+
+#nav-login-btn a:hover { background-color: transparent; text-decoration:;}
+#nav-user-name a:hover { background-color: transparent; text-decoration:;cursor:default}
+/* ==== header ==== */
+
+.header-content{
+	padding:20px;
+	
+}
+.container {
+    max-width: 990px;
+}
+
+
+/* ==== main content ==== */
+
+
+.container.main {
+    -moz-box-sizing: border-box;
+	background-color: #ffffff;
+   	box-shadow:  0px 6px 30px rgba(0, 0, 0, 0.4);
+    min-height: 300px;
+    padding: 20px 20px 40px;
+	border-radius: 4px;
+}
+
+.vv-promo h1 {
+	
+	/*font-size:40px;*/
+
+}
+
+.vv-footer{
+	margin-top:20px;
+	margin-bottom:40px;
+	background:transparent;
+
+}
+.vv-footer p{
+	color:#999999;
+}
+
+.home-logo
+{
+    background: url("/images/vv-logo/LOGO.png") #cccccc no-repeat scroll center;
+    border: 5px solid hsl(0, 0%, 100%);
+    border-radius: 9999px;
+    display: block;
+    height: 100px;
+    left: 0;
+    width: 100px;
+    z-index: 3;
+	float:left;
+	margin-right:20px;
+}
+
+.site-logo
+{
+   font-weight: bold;
+}
+
+.site-user
+{
+   background:#3d79ae;
+}
+
+.warning
+{
+	color: #DF013A;
+	font-weight:bold;
+}
+
+.note
+{
+	background:#F2F2F2;
+	color: #424242;
+	padding: 5px;
+
+}
+.page-time
+{
+	font-size:11px;
+	color:#6E6E6E;
+}
+.font-red
+{
+	color:red;
+}
+.content-hide
+{
+	display:none
+}

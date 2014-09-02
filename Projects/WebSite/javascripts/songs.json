@@ -1,0 +1,29 @@
+{
+    "album": 
+	{
+		"title": "The King of Limbs",
+		"id": "1",
+		"songs": [
+			{
+				"title": "bloom",
+				"length": "5:15",
+				"songId": "1"
+			},
+			{
+				"title": "Morning Mr Magpie",
+				"length": "4:41",
+				"songId": "2"
+			},
+			{
+				"title": "Little by Little",
+				"length": "4:27",
+				"songId": "3"
+			},
+			{
+				"title": "Feral",
+				"length": "3:13",
+				"songId": "4"
+			}
+		]
+	}
+}

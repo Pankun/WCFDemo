@@ -1,0 +1,11 @@
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongWCF\obj\Debug\SongWCF.csprojResolveAssemblyReference.cache
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongWCF\bin\SongWCF.dll
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongWCF\bin\SongWCF.pdb
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongWCF\bin\SongDAO.dll
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongWCF\bin\SongDAO.pdb
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongWCF\obj\Debug\SongWCF.dll
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongWCF\obj\Debug\SongWCF.pdb
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongWCF\bin\LocalAppLog.dll
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongWCF\bin\LocalAppLog.pdb
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongWCF\bin\SongWCF.XML
+C:\$Download\Dropbox\HomeShare\Dennis\MyProjects\Theranos_WCF\SongWCF\SongWCF\bin\SongDAO.xml

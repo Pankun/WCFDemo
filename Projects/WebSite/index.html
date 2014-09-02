@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <meta name='description' content=''>
+    <meta name='author' content=''>
+    <script src='/javascripts/jquery-1.10.2.js'></script>
+	<script src='/javascripts/json2.js'></script>
+	<script src='/javascripts/bootstrap.min.js'></script>
+	<script src='/javascripts/underscore-min.js'></script>
+    <link rel='shortcut icon' href=''>
+	<link href='/stylesheets/main.css' rel='stylesheet'>
+    <title>WCF Exercise</title>
+	
+</head>
+<body>
+    <div class="header-content">
+	 <div class="container">
+		<h1>WCF Application Demo <small> (Responsive UI)</small></h1>
+	 </div>
+	</div>
+	<div class="container main">
+		<h2>Song Album - Search/ Update/ Add Songs</h2>
+		<p></p>
+		<p>Search songs by entering an album name. Also you can update/add songs to the album.</p>
+		<div class="form-horizontal" role="form">
+			<div class="form-group">
+			<div class="col-sm-6">
+				<input class="form-control" type="text" name="albumInput" placeholder="Enter an Album Name"/> 
+				(Case-sensitive, e.g., The King of Limbs) 
+			</div>
+			<div class="col-sm-6">
+				<button type="button" id="submitForm" data-loading-text="Loading... <img src='/images/spinner_20x20.gif'/>" class="btn btn-primary">Search</button>
+			</div>
+			</div>
+		</div>
+		<div id="MsgPanel" style="display:none;color:red"></div>
+
+		<!--Album details template-->
+		<script type="text/template" id="album_details">
+			 <div class="panel panel-info">
+				<div class="panel-heading"><b><%= titleField%></b><a class="pull-right" href="javascript:openSongModal('add','','','')"><b>+ Add New Song</b></a></div>
+			     
+				 <div class="panel-body table-responsive">
+				   <table class="table table-striped table-hover">
+					   <thead>
+					   <tr><th>Song Id</th><th>Song Title</th><th>Song Length</th><th></th></tr>
+					   </thead>
+					   <tbody>
+					   <% _.each( songField, function( song, i ){ %>
+								<tr>
+								<td><%= song.songIdField %></td>
+								<td><%= song.titleField %></td>
+								<td><%= song.lengthField %></td>
+								
+								<td><a href="javascript:openSongModal('edit','<%= song.songIdField %>','<%= song.titleField %>','<%= song.lengthField %>')"><b>Edit</b></a></td>
+						        </tr>
+					   <% });%>
+					   </tbody>
+				   </table>
+				 </div>
+			 </div>
+		</script>
+		<!--//Album details template-->
+		<div id="results"></div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="songModal" tabindex="-1" role="dialog" aria-labelledby="songModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title"><span id="modal_albumTitle"></span> - <span id="modal_action"></span></h4>
+			  </div>
+			  <div class="modal-body">
+				<div class="form-horizontal" role="form">
+					<div class="form-group">
+					    <span id="songID" style="display:none"></span>
+						<label for="sTitle" class="col-sm-3 control-label">Title<span style="color:red">*</span></label>
+						<div class="col-sm-6">
+							<input id="sTitle" maxlength="25" class="form-control" type="text" placeholder="Enter Song Title">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="sLength" class="col-sm-3 control-label">Length<span style="color:red">*</span></label>
+						<div class="col-sm-6">
+							<input id="sLength" maxlength="25" class="form-control" type="text" placeholder="Enter Song Length">
+						</div>
+					</div>
+				</div>
+				<div id="modalMsg"></div>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button id="addSong" type="button" class="btn btn-primary" data-loading-text="Loading... <img src='/images/spinner_20x20.gif'/>" onclick="submitSong('add')">Add</button>
+				<button id="updateSong" type="button" class="btn btn-primary" data-loading-text="Loading... <img src='/images/spinner_20x20.gif'/>" onclick="submitSong('update')">Update</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</div>
+	<script>
+         		
+			function openSongModal(action, id, title, length){
+			    				
+				$("#modalMsg").html("");
+				$("#sTitle").val(title);
+				$("#sLength").val(length);
+				$("#songID").html(id);
+				$("#updateSong").hide();
+				$("#addSong").hide();
+				$("#modalMsg").hide();
+								
+				if(action=="add")
+				{
+					$("#modal_action").html("Add New Song");
+					$("#addSong").show();
+					
+					
+				}
+				else if(action=="edit")
+				{
+				    $("#modal_action").html("Edit Song");
+					$("#updateSong").show();
+				
+				}
+				
+				$("#songModal").modal('show');
+				
+				
+			}
+			
+            function submitSong(action)
+            {
+			  var albumName = $("input[name='albumInput']").val();
+			  var songID = $("#songID").html();
+			  $("#modalMsg").html("");
+			  $("#modalMsg").hide();
+			  var apiURL = "";
+			  var sTitle = $("#sTitle").val().replace(/\'|\"/g, "");
+			  var sLength = $("#sLength").val().replace(/\'|\"/g, "").replace(/\:/g,".");
+			 
+			  if(sTitle=="" || sLength==""){
+					$("#modalMsg").html("<span style='color:red'>Song title and length are requiered!</span>");
+				    $("#modalMsg").show();
+					return;
+			  }
+			  
+			  if(action=="add"){
+				apiURL="/SongSET.svc/AddSongInfo/Radiohead/"+albumName+"/"+sTitle+"/"+sLength;
+				$("#addSong").button("loading");
+			  }else if (action="edit")
+			  {
+				apiURL="/SongSET.svc/UpdateSongInfo/Radiohead/"+albumName+"/"+songID+"/"+sTitle+"/"+sLength;
+				$("#updateSong").button("loading");
+			  }
+			  
+			  $.ajax({
+						url: apiURL,			       
+						contentType: "application/json; charset=utf-8",
+						dataType: "json",
+						type: "GET",
+						success: function(albumData){
+						    
+							if(albumData.ReturnFlag==false ){
+							//"ReturnFlag":false	
+								$("#modalMsg").html("<span style='color:red'>"+albumData.ReturnMessage+"</span>");
+								$("#modalMsg").show();
+								$("#addSong").button("reset");
+						        $("#updateSong").button("reset");
+							
+							}
+							else
+							{//"ReturnFlag":true
+								$("#modalMsg").html("<span style='color:green'>"+albumData.ReturnMessage+"</span>");
+								$("#modalMsg").show();
+								$("#addSong").button("reset");
+						        $("#updateSong").button("reset");
+								SearchAlbum($("input[name='albumInput']").val());
+							
+							}
+					
+						},
+						error:function(xhr, ajaxOptions, thrownError){
+						
+						  $("#modalMsg").html("<span style='color:red'>The service is busy now. Please try later.</span>");
+						  $("#modalMsg").show();
+						  $("#addSong").button("reset");
+						  $("#updateSong").button("reset");
+						}
+				});
+	
+			}			
+			           			
+			$("#submitForm").click(function(){
+				
+				$("#MsgPanel").hide();
+				$("#results").html("");
+							
+				var input = $("input[name='albumInput']").val();
+								
+				if (input==""){ 
+					$("#MsgPanel").html("<span style='color:red'>Album name is required!</span>"); 
+					$("#MsgPanel").show();
+					return; 
+				}
+				$("#submitForm").button("loading");
+				
+				SearchAlbum(input)
+			
+			});
+			
+			function SearchAlbum(albumName){
+			
+				$.ajax({
+						url: "/SongGET.svc/GetAlbumInfo/"+albumName,
+						//url:"/javascripts/album.json",
+						contentType: "application/json; charset=utf-8",
+						dataType: "json",
+						type: "GET",
+						success: function(albumData){
+						    
+							if(albumData.titleField!=null){
+								$("#modal_albumTitle").html(albumData.titleField);							
+								var template = _.template( $("#album_details").html(), albumData);
+								$("#results").html( template );
+								$("#submitForm").button("reset");
+																				
+							}
+							else{
+								  $("#MsgPanel").html("<span style='color:#999999'>No Results</span>");
+								  $("#MsgPanel").show();
+								  $("#submitForm").button("reset");
+								 
+							}
+						 
+						},
+						error:function(xhr, ajaxOptions, thrownError){
+						
+						  $("#MsgPanel").html("<span style='color:#999999'>No Results</span>");
+						  $("#MsgPanel").show();
+						  $("#submitForm").button("reset");
+						}
+				});
+					
+			}
+	</script>	
+</body>
+</html> 
+

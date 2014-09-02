@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SongWCF</name>
+    </assembly>
+    <members>
+        <member name="T:SongWCF.SongGET">
+            <summary>
+            Song GET WCF Services
+            </summary>
+        </member>
+        <member name="M:SongWCF.SongGET.GetAlbumInfo(System.String)">
+            <summary>
+            Get Album and Song information
+            </summary>
+            <param name="AlbumName">Album Name</param>
+            <returns>
+            album
+            </returns>        
+        </member>
+        <member name="M:SongWCF.ISongSET.AddSongInfo(System.String,System.String,System.String,System.String)">
+            <summary>
+            WCF Interface of Adding Song Information
+            </summary>
+            <param name="TheArtist">Artist Name</param>
+            <param name="TheAlbum">Album Title</param>
+            <param name="TheTitle">Song Title</param>
+            <param name="TheLength">Song Length</param>
+            <returns></returns>
+        </member>
+        <member name="M:SongWCF.ISongSET.UpdateSongInfo(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            WCF Interface of Updating Song Information
+            </summary>
+            <param name="TheArtist">Artist Name</param>
+            <param name="TheAlbum">Album Title</param>
+            <param name="TheSongId">Song ID</param>
+            <param name="TheTitle">Song Title</param>
+            <param name="TheLength">Song Length</param>
+            <returns></returns>
+        </member>
+        <member name="T:SongWCF.SongSET">
+            <summary>
+            Song SET WCF Services
+            </summary>
+        </member>
+        <member name="M:SongWCF.SongSET.AddSongInfo(System.String,System.String,System.String,System.String)">
+            <summary>
+            Add a new song into data source
+            </summary>
+            <param name="TheArtist">Artist Name</param>
+            <param name="TheAlbum">Album Title</param>
+            <param name="TheTitle">Song Title</param>
+            <param name="TheLength">Song Length</param>
+            <returns>
+            FunctionReturnObject
+            </returns>
+        </member>
+        <member name="M:SongWCF.SongSET.UpdateSongInfo(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Update a song's information (By Song's ID)
+            </summary>
+            <param name="TheArtist">Artist Name</param>
+            <param name="TheAlbum">Album Title</param>
+            <param name="TheSongId">Song ID</param>
+            <param name="TheTitle">Song Title</param>
+            <param name="TheLength">Song Length</param>
+            <returns>
+            FunctionReturnObject
+            </returns>
+        </member>
+        <member name="M:SongWCF.SongSET.ConcurrentControl_Entry">
+            <summary>
+            Concurrent control for XML source access - Entry Point Control
+            </summary>
+            <returns></returns>
+            <remarks>
+            (Mutual exclusion - Dekker's algorithm)
+            </remarks>
+        </member>
+        <member name="M:SongWCF.SongSET.ConcurrentControl_Exit">
+            <summary>
+            Concurrent control for XML source access - Exit Point Control
+            </summary>
+            <returns></returns>
+            <remarks>
+            (Mutual exclusion - Dekker's algorithm)
+            </remarks>
+        </member>
+    </members>
+</doc>

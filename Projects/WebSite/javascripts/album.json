@@ -1,0 +1,46 @@
+{
+    "idField": "1",
+    "songField": [
+        {
+            "lengthField": "5:15",
+            "songIdField": "1",
+            "titleField": "Bloom"
+        },
+        {
+            "lengthField": "4:41",
+            "songIdField": "2",
+            "titleField": "Morning Mr Magpie"
+        },
+        {
+            "lengthField": "4:27",
+            "songIdField": "3",
+            "titleField": "Little by Little"
+        },
+        {
+            "lengthField": "3:13",
+            "songIdField": "4",
+            "titleField": "Feral"
+        },
+        {
+            "lengthField": "5:01",
+            "songIdField": "5",
+            "titleField": "Lotus Flower"
+        },
+        {
+            "lengthField": "4:47",
+            "songIdField": "6",
+            "titleField": "Codex"
+        },
+        {
+            "lengthField": "4:50",
+            "songIdField": "7",
+            "titleField": "Give Up the Ghost"
+        },
+        {
+            "lengthField": "5:20",
+            "songIdField": "8",
+            "titleField": "Separator"
+        }
+    ],
+    "titleField": "The King of Limbs"
+}
